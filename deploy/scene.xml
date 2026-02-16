@@ -1,0 +1,127 @@
+<!-- MuJoCo scene for G1 robot simulation. -->
+<mujoco model="g1_scene">
+  <include file="g1_12dof.xml"/>
+
+  <statistic center="1.0 0.7 1.0" extent="0.8"/>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.1 0.1 0.1" specular="0.9 0.9 0.9"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="-140" elevation="-20"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="flat" rgb1="0 0 0" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge"
+             rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8"
+             width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true"
+              texrepeat="5 5" reflectance="0.2"/>
+  </asset>
+
+  <worldbody>
+    <light pos="1 0 3.5" dir="0 0 -1" directional="true"/>
+    <geom name="floor" size="10 10 0.01" type="plane" material="groundplane" pos="0 0 -0.01"/>
+
+    <body name="bump0" pos="2.185 2.254 0"><geom type="cylinder" size="0.060 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump1" pos="1.202 -2.210 0"><geom type="cylinder" size="0.060 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump2" pos="0.593 2.350 0"><geom type="cylinder" size="0.041 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump3" pos="1.325 -0.979 0"><geom type="cylinder" size="0.052 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump4" pos="3.253 -1.803 0"><geom type="box" size="0.062 0.067 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump5" pos="1.399 0.071 0"><geom type="cylinder" size="0.032 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump6" pos="1.267 -2.175 0"><geom type="cylinder" size="0.078 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump7" pos="1.871 -2.012 0"><geom type="cylinder" size="0.052 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump8" pos="2.728 -2.328 0"><geom type="cylinder" size="0.043 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump9" pos="1.903 0.100 0"><geom type="cylinder" size="0.039 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump10" pos="3.988 2.197 0"><geom type="cylinder" size="0.060 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump11" pos="0.898 -1.520 0"><geom type="box" size="0.060 0.063 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump12" pos="4.229 -0.716 0"><geom type="box" size="0.073 0.048 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump13" pos="0.835 2.434 0"><geom type="cylinder" size="0.040 0.005" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump14" pos="4.170 1.034 0"><geom type="cylinder" size="0.069 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump15" pos="2.113 -1.921 0"><geom type="cylinder" size="0.061 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump16" pos="0.786 -0.945 0"><geom type="box" size="0.084 0.078 0.014" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump17" pos="2.625 -1.902 0"><geom type="cylinder" size="0.068 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump18" pos="3.969 -0.031 0"><geom type="cylinder" size="0.051 0.005" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump19" pos="0.986 -2.343 0"><geom type="cylinder" size="0.046 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump20" pos="4.584 -1.254 0"><geom type="box" size="0.085 0.054 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump21" pos="1.804 -1.694 0"><geom type="cylinder" size="0.070 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump22" pos="4.422 1.518 0"><geom type="box" size="0.094 0.072 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump23" pos="4.532 -0.910 0"><geom type="box" size="0.054 0.066 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump24" pos="4.373 -2.465 0"><geom type="cylinder" size="0.051 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump25" pos="1.039 -0.812 0"><geom type="cylinder" size="0.046 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump26" pos="3.664 -0.682 0"><geom type="cylinder" size="0.078 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump27" pos="2.738 -0.996 0"><geom type="box" size="0.042 0.077 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump28" pos="0.732 -1.107 0"><geom type="cylinder" size="0.042 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump29" pos="2.703 2.428 0"><geom type="box" size="0.080 0.086 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump30" pos="3.777 -0.661 0"><geom type="cylinder" size="0.062 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump31" pos="0.906 1.677 0"><geom type="box" size="0.051 0.042 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump32" pos="3.549 -2.417 0"><geom type="cylinder" size="0.041 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump33" pos="1.285 0.955 0"><geom type="box" size="0.096 0.048 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump34" pos="1.011 2.123 0"><geom type="cylinder" size="0.043 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump35" pos="4.177 0.276 0"><geom type="cylinder" size="0.042 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump36" pos="4.537 2.002 0"><geom type="cylinder" size="0.047 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump37" pos="3.767 1.986 0"><geom type="cylinder" size="0.069 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump38" pos="0.879 -1.692 0"><geom type="cylinder" size="0.060 0.005" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump39" pos="0.957 0.818 0"><geom type="box" size="0.050 0.073 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump40" pos="3.434 -1.379 0"><geom type="cylinder" size="0.042 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump41" pos="3.859 0.748 0"><geom type="cylinder" size="0.063 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump42" pos="0.922 -0.661 0"><geom type="box" size="0.055 0.098 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump43" pos="4.514 0.656 0"><geom type="cylinder" size="0.055 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump44" pos="2.716 -1.524 0"><geom type="cylinder" size="0.044 0.005" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump45" pos="3.405 -1.614 0"><geom type="cylinder" size="0.078 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump46" pos="2.166 -2.423 0"><geom type="cylinder" size="0.051 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump47" pos="4.836 1.765 0"><geom type="box" size="0.063 0.091 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump48" pos="1.263 0.284 0"><geom type="cylinder" size="0.065 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump49" pos="0.937 0.575 0"><geom type="cylinder" size="0.037 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump50" pos="4.448 1.204 0"><geom type="cylinder" size="0.065 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump51" pos="1.821 1.547 0"><geom type="cylinder" size="0.073 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump52" pos="2.801 0.008 0"><geom type="cylinder" size="0.062 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump53" pos="4.081 1.950 0"><geom type="box" size="0.063 0.046 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump54" pos="0.662 -0.172 0"><geom type="cylinder" size="0.044 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump55" pos="0.637 -2.313 0"><geom type="cylinder" size="0.048 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump56" pos="2.850 1.350 0"><geom type="box" size="0.077 0.045 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump57" pos="2.891 0.203 0"><geom type="cylinder" size="0.066 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump58" pos="2.823 -0.885 0"><geom type="cylinder" size="0.044 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump59" pos="0.853 -2.373 0"><geom type="cylinder" size="0.072 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump60" pos="2.340 -1.634 0"><geom type="box" size="0.055 0.073 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump61" pos="3.471 -1.100 0"><geom type="cylinder" size="0.067 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump62" pos="3.253 -0.402 0"><geom type="box" size="0.061 0.085 0.005" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump63" pos="1.022 -2.270 0"><geom type="box" size="0.091 0.082 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump64" pos="0.940 -0.042 0"><geom type="box" size="0.050 0.066 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump65" pos="3.271 0.675 0"><geom type="box" size="0.062 0.078 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump66" pos="4.354 0.793 0"><geom type="box" size="0.044 0.079 0.005" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump67" pos="3.136 2.201 0"><geom type="cylinder" size="0.049 0.010" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump68" pos="2.562 0.228 0"><geom type="cylinder" size="0.049 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump69" pos="4.574 -1.521 0"><geom type="box" size="0.046 0.041 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump70" pos="3.574 -2.144 0"><geom type="box" size="0.091 0.041 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump71" pos="1.768 -1.909 0"><geom type="cylinder" size="0.061 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump72" pos="3.808 1.517 0"><geom type="box" size="0.051 0.085 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump73" pos="4.957 -0.437 0"><geom type="box" size="0.087 0.060 0.014" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump74" pos="4.363 -0.355 0"><geom type="cylinder" size="0.068 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump75" pos="4.561 0.026 0"><geom type="cylinder" size="0.046 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump76" pos="2.251 -2.446 0"><geom type="cylinder" size="0.035 0.007" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump77" pos="4.775 2.253 0"><geom type="cylinder" size="0.062 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump78" pos="1.819 -0.857 0"><geom type="cylinder" size="0.068 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump79" pos="4.053 -2.044 0"><geom type="box" size="0.043 0.073 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump80" pos="4.495 -0.745 0"><geom type="box" size="0.049 0.086 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump81" pos="0.955 -2.079 0"><geom type="cylinder" size="0.034 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump82" pos="3.678 -2.093 0"><geom type="box" size="0.099 0.062 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump83" pos="4.158 2.236 0"><geom type="cylinder" size="0.068 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump84" pos="0.876 1.386 0"><geom type="cylinder" size="0.051 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump85" pos="1.000 -0.037 0"><geom type="box" size="0.068 0.043 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump86" pos="1.029 0.746 0"><geom type="cylinder" size="0.059 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump87" pos="2.187 -1.071 0"><geom type="cylinder" size="0.041 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump88" pos="0.555 2.349 0"><geom type="box" size="0.093 0.072 0.015" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump89" pos="0.832 0.269 0"><geom type="cylinder" size="0.056 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump90" pos="3.631 -0.227 0"><geom type="cylinder" size="0.059 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump91" pos="0.705 -1.095 0"><geom type="cylinder" size="0.075 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump92" pos="3.291 -1.113 0"><geom type="box" size="0.068 0.061 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump93" pos="0.850 2.372 0"><geom type="cylinder" size="0.065 0.009" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump94" pos="1.893 1.569 0"><geom type="cylinder" size="0.038 0.011" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump95" pos="4.201 2.249 0"><geom type="cylinder" size="0.061 0.008" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump96" pos="4.697 1.830 0"><geom type="box" size="0.042 0.063 0.013" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump97" pos="4.943 -1.748 0"><geom type="cylinder" size="0.049 0.012" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump98" pos="4.290 1.692 0"><geom type="box" size="0.065 0.056 0.006" rgba="0.4 0.4 0.4 1"/></body>
+    <body name="bump99" pos="4.391 1.565 0"><geom type="cylinder" size="0.080 0.009" rgba="0.4 0.4 0.4 1"/></body>
+  </worldbody>
+</mujoco>
